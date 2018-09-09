@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>H5拖拽skr</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #eee;
+        }
+
+        .container{
+            display: flex;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .device{
+            width: 200px;
+            height: 300px;
+            border: #666666 solid 2px;
+        }
+
+
+        .title{
+            height: 16px;
+            background-color: #666666;
+            font-size: 10px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 16px;
+        }
+
+        .screen{
+            height: 284px;
+            text-align: center;
+        }
+
+        .app-list{
+            width: 200px;
+            height: 300px;
+            border: #666666 solid 2px;
+            margin-left: 30px;
+        }
+
+        .item{
+            margin: 5px;
+            background-color: #fff;
+            width: 50px;
+            height: 50px;
+            box-shadow: #666 0 10px 10px;
+        }
+
+        .item-title{
+            height: 10px;
+            background-color: #00afc7;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="device">
+        <div class="title">手机</div>
+        <div class="screen" id="screen">
+            <p>拖动App到此处</p>
+        </div>
+    </div>
+
+    <div class="app-list">
+        <div class="title">应用商店</div>
+        <div class="item-list">
+            <div class="item" id="item" draggable="true">
+                <div class="item-title"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var item = document.getElementById('item');
+    var screen = document.getElementById('screen');
+
+    item.addEventListener('dragstart',(event)=>{
+        // 拖动的时候，放进自己的id
+        // Text是数据类型
+        event.dataTransfer.setData("Text",event.target.id);
+    });
+
+    screen.addEventListener('drop',(event)=>{
+        event.preventDefault();
+        // 获取拖进来的DOM的id
+        let data = event.dataTransfer.getData("Text");
+        // 加为自己的子元素
+        event.target.appendChild(document.getElementById(data));
+        event.preventDefault();
+    });
+
+    // 一定要有dragover，不然无效
+    screen.addEventListener('dragover',(event)=>{
+        event.preventDefault();
+    });
+
+
+</script>
+
+</body>
+
+</html>
