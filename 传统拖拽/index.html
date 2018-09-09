@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>传统拖拽skr！</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            min-width: 1500px;
+            background-color: #eee;
+        }
+
+        .item{
+            background-color: #fff;
+            width: 150px;
+            height: 180px;
+            box-shadow: #666 0 10px 10px;
+        }
+
+        .item-title{
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            background-color: #00afc7;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="item" id="item"
+     style="position: absolute;
+            left: 50px;
+            top: 50px;">
+
+    <div class="item-title">
+    </div>
+
+
+</div>
+
+
+<script>
+
+    //获取dpr
+    // window.devicePixelRatio
+
+    var isDown = false;
+    var item = document.getElementById('item');
+
+    var x;
+    var y;
+
+    // 确定鼠标刚按下的时候的位置
+    item.addEventListener('mousedown',(event)=>{
+
+        console.log('down');
+
+        isDown = true;
+        x = event.pageX;
+        y = event.pageY;
+
+    });
+
+    // 这个是鼠标移动事件，不是拖动事件
+    // 移动的时候，获取当前的位置，减去之前鼠标按下的位置，就是拖动的距离
+    // top 和 left 加上对应的距离，就能重绘item的位置了
+    item.addEventListener('mousemove',(event)=>{
+
+        if(isDown){
+            console.log('down-move');
+            //item.style只能获取行内样式，style标签里的都不行
+            //没必要纠结，如果要实时改变的样式，还是得放在style属性里
+            item.style.left = parseInt(item.style.left) + (event.pageX - x) + 'px';
+            item.style.top = parseInt(item.style.top) + (event.pageY - y) + 'px';
+
+            //更新很重要
+            //不然的话，每次都是相当于第一次按下的距离，错误的！
+            x = event.pageX;
+            y = event.pageY;
+
+            //兼容的方法,但这是只读的
+            // let newX = window.getComputedStyle(item).left + event.pageX - x;
+            // let newY = window.getComputedStyle(item).top + event.pageY - y;
+        }
+
+    });
+
+    // 由于鼠标离开了操作的区域，触发了mouseleave导致mouseup丢失
+    // 一般情况下，鼠标和拖动是一样快的，除非你飞快移动鼠标，还是要注意一下
+    item.addEventListener('mouseleave',()=>{
+        console.log('leave');
+        isDown = false;
+    });
+
+    item.addEventListener('mouseup',()=>{
+        console.log('up');
+        isDown = false;
+    });
+
+</script>
+</body>
+
+</html>
