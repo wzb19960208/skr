@@ -102,6 +102,12 @@
         }
 
         for(file of files){
+
+            if(file.name.length>24){
+                alert(file.name+'\n该文件文件名太长，请保持在24个字符以内');
+                return;
+            }
+
             let title = document.createElement('div');
             title.className = 'item-title';
             title.innerText = file.name;
