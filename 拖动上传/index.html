@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>拖动上传skr</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #eee;
+        }
+
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: #fff;
+            border: #666 dashed 2px;
+        }
+
+        .container-active{
+            width: 400px;
+            height: 400px;
+            background-color: #fff;
+            border: rgba(0,0,255,0.5) dashed 2px;
+        }
+
+        .item{
+            display: inline-block;
+            margin: 5px;
+            background-color: #fff;
+            width: 80px;
+            height: 80px;
+            box-shadow: #666 0 10px 10px;
+        }
+
+        .item-title{
+            background-color: #00afc7;
+            /*文字到达宽度后，自动换行*/
+            word-break: break-all;
+            word-wrap: break-word;
+
+        }
+
+        .desc{
+            width: 400px;
+            text-align: center;
+        }
+
+        .desc-active{
+            width: 400px;
+            text-align: center;
+            color: rgba(0,0,255,0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container" id="container">
+
+</div>
+<div class="desc" id="desc">
+    请将文件拖动到框内
+</div>
+
+
+<script>
+    var container = document.getElementById('container');
+    var desc = document.getElementById('desc');
+
+    container.addEventListener('dragenter',(event)=>{
+        event.preventDefault();
+       event.target.className = 'container-active';
+       desc.className = 'desc-active';
+       desc.innerText = '松开鼠标即可上传文件'
+    });
+
+    container.addEventListener('dragleave',(event)=>{
+        event.preventDefault();
+        event.target.className = 'container';
+        desc.className = 'desc';
+        desc.innerText = '请将文件拖动到框内'
+    });
+
+
+    //drop是拖后放进去
+    container.addEventListener('drop',(event)=>{
+
+        // 取消默认效果，因为文件拖动上去会在浏览器预览
+        event.preventDefault();
+
+        event.target.className = 'container';
+        desc.className = 'desc';
+        desc.innerText = '请将文件拖动到框内';
+
+        let files = event.dataTransfer.files;
+
+        if(event.target.childElementCount+files.length>16){
+            alert('上传文件的文件总数不能超过16个');
+            return;
+        }
+
+        for(file of files){
+            let title = document.createElement('div');
+            title.className = 'item-title';
+            title.innerText = file.name;
+            let item = document.createElement('div');
+            item.className = 'item';
+            item.appendChild(title);
+            event.target.appendChild(item);
+        }
+    });
+
+    container.addEventListener('dragover',(event)=>{
+        event.preventDefault();
+    });
+</script>
+</body>
+
+</html>
