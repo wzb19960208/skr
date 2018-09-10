@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d1dd5a-5acc-4d1d-8ef7-894ada860c76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/H5拖拽/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/img/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/拼图/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,39 +27,52 @@
     <session id="-2059965193">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.99" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="3" />
+          <entry key="html" value="4" />
+          <entry key="jpg" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="3" />
+          <entry key="HTML" value="4" />
+          <entry key="Image" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2465" />
+          <entry key="html" value="3596" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2465" />
+          <entry key="HTML" value="3596" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/H5拖拽/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+            <state relative-caret-position="385">
+              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/拼图/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1069">
+              <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -58,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/传统拖拽/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="228">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="12" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -77,6 +99,7 @@
       <list>
         <option value="$PROJECT_DIR$/传统拖拽/index.html" />
         <option value="$PROJECT_DIR$/H5拖拽/index.html" />
+        <option value="$PROJECT_DIR$/拼图/index.html" />
       </list>
     </option>
   </component>
@@ -86,7 +109,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="165" />
     <option name="y" value="110" />
     <option name="width" value="1750" />
@@ -110,12 +133,13 @@
             <path>
               <item name="skr" type="b2602c69:ProjectViewProjectNode" />
               <item name="skr" type="462c0819:PsiDirectoryNode" />
-              <item name="H5拖拽" type="462c0819:PsiDirectoryNode" />
+              <item name="拼图" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="skr" type="b2602c69:ProjectViewProjectNode" />
               <item name="skr" type="462c0819:PsiDirectoryNode" />
-              <item name="传统拖拽" type="462c0819:PsiDirectoryNode" />
+              <item name="拼图" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -129,6 +153,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\南京实验室相关\skr\拼图\img" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -152,24 +181,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536461749771</updated>
-      <workItem from="1536461752396" duration="8367000" />
+      <workItem from="1536461752396" duration="8685000" />
+      <workItem from="1536543436807" duration="4027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8367000" />
+    <option name="totallyTimeSpent" value="12712000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -177,6 +203,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -189,20 +219,30 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/H5拖拽/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/传统拖拽/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="228">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="12" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/H5拖拽/index.html">
+    <entry file="file://$PROJECT_DIR$/拼图/img/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/拼图/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        <state relative-caret-position="1069">
+          <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
         </state>
       </provider>
     </entry>

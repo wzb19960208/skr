@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>拼图skr</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #eee;
+        }
+
+        .container{
+            width: 600px;
+            height: 600px;
+            background-color: #ffffff;
+            margin-left: 50px;
+            margin-top: 50px;
+            box-shadow: #666666 0 10px 20px;
+            /*行内元素之间有默认的间距，这个在控制台也发现不了，将字符设为0*/
+            font-size: 0;
+        }
+
+        .item{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <div class="item" draggable="true">
+        <img src="img/2.jpg">
+    </div>
+    <div class="item" draggable="true">
+        <img src="img/1.jpg">
+    </div>
+    <div class="item" draggable="true">
+        <img src="img/5.jpg">
+    </div>
+    <div class="item" draggable="true">
+        <img src="img/4.jpg">
+    </div>
+    <div class="item" draggable="true">
+        <img src="img/6.jpg">
+    </div>
+    <div class="item" draggable="true">
+        <img src="img/9.jpg">
+    </div>
+    <div class="item" draggable="true">
+        <img src="img/7.jpg">
+    </div>
+    <div class="item" draggable="true">
+        <img src="img/8.jpg">
+    </div>
+    <div class="item" draggable="true">
+        <img src="img/3.jpg">
+    </div>
+
+</div>
+
+<script>
+
+    var items = document.getElementsByClassName('item');
+
+    var source;
+
+    for(item of items){
+        item.addEventListener('dragstart',(event)=>{
+            source = event.path[1];
+            event.dataTransfer.setData("text/html",source.innerHTML);
+        });
+
+        //innerHtml是string
+        //event.target是Dom元素
+        //这俩转换不了的
+
+        item.addEventListener('drop',(event)=>{
+           event.preventDefault();
+           var temp = event.path[1].innerHTML;
+           event.path[1].innerHTML = event.dataTransfer.getData("text/html");
+           source.innerHTML = temp;
+        });
+
+        item.addEventListener('dragover',(event)=>{
+            event.preventDefault();
+        });
+    }
+
+</script>
+
+</body>
+
+</html>
